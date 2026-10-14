@@ -6,7 +6,7 @@
 /*   By: tsomchan <tsomchan@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 19:11:16 by tsomchan          #+#    #+#             */
-/*   Updated: 2026/03/26 20:04:36 by tsomchan         ###   ########.fr       */
+/*   Updated: 2026/10/14 16:54:27 by tsomchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 const Bureaucrat test(std::string name, int grade)
 {
-	std::cout << std::endl;
 	std::cout << BLU << "Bureaucrat: " << CYN << "name = " << YLW << name << CYN << ", grade = " << YLW << grade << NCL << std::endl;
 	try
 	{
@@ -57,17 +56,30 @@ void	decrement_test(std::string name, int grade)
 	}
 }
 
+void	test_header(std::string text)
+{
+	std::cout << GRN << "=== " << CYN << text  << GRN "\t==================================================== == = =" << NCL << std::endl;
+}
+
 int main(void)
 {
+	std::cout << PUR "=== " GRN"CPP05 " CYN"ex00" PUR " ====== ==== === = = =" NCL << std::endl;
+
+	test_header("test");
 	test("a", -1);
 	test("b", 151);
 	test("c", 42);
+	std::cout << std::endl;
 
+	test_header("increment_test");
 	increment_test("d", 2);
 	increment_test("e", 1);
+	std::cout << std::endl;
 	
+	test_header("decrement_test");
 	decrement_test("f", 149);
 	decrement_test("g", 150);
+	std::cout << std::endl;
 
 	return (0);
 }
