@@ -6,12 +6,12 @@
 /*   By: tsomchan <tsomchan@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 16:40:48 by tsomchan          #+#    #+#             */
-/*   Updated: 2026/10/14 17:01:08 by tsomchan         ###   ########.fr       */
+/*   Updated: 2026/10/14 17:53:08 by tsomchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-# define FORM_HPP
+#ifndef AFORM_HPP
+# define AFORM_HPP
 
 # include "Bureaucrat.hpp"
 # include <iostream>
@@ -20,7 +20,7 @@
 
 class Bureaucrat;
 
-class Form
+class AForm
 {
 	private:
 		const std::string	_name;
@@ -29,11 +29,11 @@ class Form
 		const int 			_exec;
 	
 	public:
-		Form();
-		Form(const std::string name, const int sign_grade, const int execute_grade);
-		Form(const Form &other);
-		Form &operator=(const Form &other);
-		~Form();
+		AForm();
+		AForm(const std::string name, const int sign_grade, const int execute_grade);
+		AForm(const AForm &other);
+		AForm &operator=(const AForm &other);
+		~AForm();
 
 		std::string getName() const;
 		bool		getSigned() const;
@@ -53,6 +53,6 @@ class Form
 		};
 };
 
-std::ostream &operator<<(std::ostream & os, Form const &other);
+std::ostream &operator<<(std::ostream & os, AForm const &other);
 
 #endif

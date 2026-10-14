@@ -6,7 +6,7 @@
 /*   By: tsomchan <tsomchan@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 18:22:45 by tsomchan          #+#    #+#             */
-/*   Updated: 2026/10/14 17:01:55 by tsomchan         ###   ########.fr       */
+/*   Updated: 2026/10/14 17:53:08 by tsomchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void		Bureaucrat::decrementGrade()
 	_grade++;
 }
 
-void		Bureaucrat::signForm(Form &form)
+void		Bureaucrat::signForm(AForm &form)
 {
 	try
 	{

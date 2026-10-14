@@ -6,7 +6,7 @@
 /*   By: tsomchan <tsomchan@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 19:11:16 by tsomchan          #+#    #+#             */
-/*   Updated: 2026/10/14 17:38:10 by tsomchan         ###   ########.fr       */
+/*   Updated: 2026/10/14 17:53:08 by tsomchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ const Bureaucrat check_bureaucrat(Bureaucrat b)
 	return check_bureaucrat(b.getName(), b.getGrade());
 }
 
-void	sign_form_test(Form form, Bureaucrat b)
+void	sign_form_test(AForm form, Bureaucrat b)
 {
 	check_bureaucrat(b);
 	b.signForm(form);
@@ -41,7 +41,7 @@ void	sign_form_test(Form form, Bureaucrat b)
 	//std::cout << std::endl;
 }
 
-void	sign_form_test(Form form, std::string b_name, int b_grade)
+void	sign_form_test(AForm form, std::string b_name, int b_grade)
 {
 	Bureaucrat b(b_name, b_grade);
 	sign_form_test(form, b);
